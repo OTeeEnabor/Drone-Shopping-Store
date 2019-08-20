@@ -1,0 +1,96 @@
+/* Font Imports  */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+/* End Font import */
+
+
+
+/*Banner-Nav Start*/
+.top-banner{
+    background-color:#eeeeee;
+    font-family:"Source Sans Pro","sans-serif";
+    letter-spacing: 2.4px;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size:12px;
+
+
+
+}
+.top-banner >div >div> div:nth-child(2){
+     text-align:center;
+}
+.top-banner > div > div > div:last-child{
+    text-align:right;
+}
+/*Banner-Nav End*/
+/*Main NAV */
+.navbar-brand{
+    color:#000000;
+    font-size:30px;
+    letter-spacing:1.5px;
+    font-weight:bold;
+
+
+}
+.nav-align{
+    justify-content:flex-end;
+}
+.nav-align > div > a{
+    padding-left: 25px !important;
+    columns: #666666;
+}
+/*END MAIN NAV*/
+
+/*HERO*/
+.jumbotron{
+    background-color:#0e0902 !important;
+    padding-top:120px;
+    padding-bottom:120px;
+    color:#ffff;
+    border-radius:0;
+    background-image: url(/images/drone_home_banner.jpeg);
+    background-repeat:no-repeat;
+    background-position-y: 25%;
+    background-position-x:25%;
+    background-size:cover;
+
+
+}
+/*END HERO*/
+
+.who-we-are{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.line{
+    width:50px;
+    height:2px;
+    background-color:#ac907f;
+}
+
+/*Media Queries*/
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+    .top-banner >div >div> div:nth-child(2){
+        text-align:center !important;
+
+   }
+   .top-banner{
+       padding-top:5px;
+       padding-bottom:5px;
+   }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... } 
