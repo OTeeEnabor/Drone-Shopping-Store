@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Drone Shop</title>
 
     <!---Bootstrap CSS-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,14 +14,15 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 
 <!--Custom CSS -->
 <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
-    <!---Start Banner Nav-->
-    <section class="top-banner">
+     <!---Start Banner Nav-->
+     <section class="top-banner-shop">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4">
@@ -49,46 +50,99 @@
             </button>
             <div class="collapse navbar-collapse nav-align" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">ABOUT</a>
-                <a class="nav-item nav-link" href="#">SHOP</a>
-                <a class="nav-item nav-link" href="#">BLOG</a>
-                <a class="nav-item nav-link" href="#">LOOKBOOK</a>
+                <a class="nav-item nav-link" href="index.html">HOME</a>  
+                <a class="nav-item nav-link active" href="shop.html">SHOP <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="lookbook.html">LOOK BOOK</a>
+                <a class="nav-item nav-link"href="#myModal" data-toggle = "modal" data-target= "#myModal" >shopicon</a>
               </div>
             </div>
          </div>
           </nav>
     <!--End Main Nav Bar-->
 
-    <!--HERO-->
-    <div class="jumbotron text-center">
-        <h2 class="card-title">ABOUT US</h2>
-        <p class="my-4">Home/About Us</p>
-    </div>
-    <!--ENDHERO-->
-
-    <!--WHO WE ARE-->
-    <section class="who-we-are">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="text-center">
-                        WHO WE ARE
-                    </h3>
-                    <hr class="line">
-
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
+    <!--Modal starts here-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content cart-modal"> 
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Shop Cart</h5> 
                 </div>
-                <div class="col-lg-6">
-                    <img src="https://via.placeholder.com/600x450" alt="">
+            <div class="modal-body">
 
+            <section class="cart">
+                <div id="cartSection" class="container-fluid">
+                <div class="row">
+                    <div class="col-4 text-center cart-heading cart-item-head">ITEM</div>
+                    <div class="col-2 cart-heading cart-price-head">PRICE</div>
+                    <div class="col-6 cart-heading price-quantity-head">QUANTITY</div>
+                </div>
+            <!--Start of cart Items-->
+                <div class="row cart-item-row">
+                    <div class="col-4 cart-item-container">
+                        <img class="modal-image cart-item-image"src="/images/featured_drone_1_cart320X213.jpg" alt="Image of ${item.img}">
+                        <p class="text-center cart-item-title">Focus Drone</p>
+                        <!-- <span class="cart-text cart-item-title">Focus Drone</span> -->
+                    </div>
+                    <div class=" col-2 cart-item-container">
+                        <span class=" cart-text cart-item-price">R25000</span>
+                    </div>
+                    <div class="col-6 cart-item-container">
+                        <div class="quantity-container">
+                            <input class="cart-quantity-input" type="number" value="1" onclick="quantityChanged(event)">
+                            <button class="btn shop-button cart-button cart-text" type="button" onclick="removeCartItem(event)">Remove Item</button>
+                        </div>
+                            
+                    </div>
+                </div>
+                </div>
+            <!--End of Cart Items-->
+            <!-- Cart Total-->
+                <div id="cartTotal"class="row cart-total-row">
+                    <h3>Total</h3>
+                    <div class="col-12 cart-total">
+                    <span class="cart-total-heading cart-total-amount"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss = "modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!--END WHO WE ARE-->
+
+    <!--Modal ends here-->
+
+    <!--HERO-->
+    <div class="jumbotron text-center jumbo-shop">
+        <h1 class="card-title">SHOP</h1>
+        <p class="my-4"><a href="index.html">Home</a>/<a href="shop.html">Shop</a></p>
+    </div>
+    <!--ENDHERO-->
+    <div class="container">
+        <div class="row">
+            <div id="shop-section"class="col-sm shop-container">
+                <div class="card">
+                    <img src="/images/featured_drone_1_small.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Focus Drone</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary text-center">Go somewhere</a>
+                    </div>
+                    <div class="card">
+                            <img src="/images/featured_drone_2_small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
