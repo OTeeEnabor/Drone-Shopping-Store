@@ -1,9 +1,12 @@
 /* Font Imports  */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 /* End Font import */
-
-
-
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
 /*Banner-Nav Start*/
 .top-banner{
     background-color:#eeeeee;
@@ -12,6 +15,7 @@
     padding-top:20px;
     padding-bottom:20px;
     font-size:12px;
+    position:sticky;
 
 
 
@@ -40,9 +44,33 @@
     columns: #666666;
 }
 /*END MAIN NAV*/
+/*==============================================================*/
+/*SHOP NAV*/
+/*shop Banner-Nav Start*/
+.top-banner-shop{
+    background-color:#eeeeee;
+    font-family:"Source Sans Pro","sans-serif";
+    letter-spacing: 2.4px;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size:12px;
+    position:sticky;
+
+
+
+}
+.top-banner-shop >div >div> div:nth-child(2){
+     text-align:center;
+}
+.top-banner-shop > div > div > div:last-child{
+    text-align:right;
+}
+/*Shop Banner-Nav End*/
+
+/*==============================================================*/
 
 /*HERO*/
-.jumbotron{
+.jumbo-home{
     background-color:#0e0902 !important;
     padding-top:120px;
     padding-bottom:120px;
@@ -53,7 +81,88 @@
     background-position-y: 25%;
     background-position-x:25%;
     background-size:cover;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
 
+}
+.jumbo-home h1{
+    color:#414149;
+    font-weight:bolder;
+    font-family:"Source Sans Pro","sans-serif";
+
+}
+.jumbo-home p{
+    margin-top:17rem;
+    color:#545968;
+}
+.shop-btn{
+    color:#4b4b53;
+    background-color:#eabb38;
+    border-radius:5rem!important;
+}
+.scroll-down{
+    /* display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center; */
+    position: relative;
+    margin:3rem auto;
+    height:20px;
+    width:20px;
+    /* background: #ffffff; */
+    transform:rotate(45deg);
+    
+}
+.scroll-down span{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    display:block;
+    box-sizing:border-box;
+    border:none;
+    border-right:2px solid #000000;
+    border-bottom:2px solid #000000;
+    animation: animate 1s linear infinite;
+
+}
+.scroll-down span:nth-child(1){
+    top:-30px;
+    left:-30px;
+animation-delay:0s;
+}
+.scroll-down span:nth-child(2){
+    top:-15px;
+    left:-15px;
+    animation-delay:0.2s;
+}
+.scroll-down span:nth-child(3){
+    top:0px;
+    left:0px;
+    animation-delay:0.4s;
+}
+.scroll-down span:nth-child(4){
+    top:15px;
+    left:15px;
+    animation-delay:0.6s;
+}
+@keyframes animate
+{
+    0%{
+        border-color:#fff;
+        transform:translate(0,0);
+    }
+    20%{
+        border-color:#fff;
+        transform:translate(15px,15px);
+    }
+    20%,100%{
+        border-color:#222;
+    }
 
 }
 /*END HERO*/
@@ -68,6 +177,229 @@
     height:2px;
     background-color:#ac907f;
 }
+/*Featured Product Section */
+.featured-product{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.featured-image-container-1{
+    widows: 300px;
+    height:300px;
+    background-image:url(/images/featured_drone_1_small.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.featured-image-container-2{
+    widows: 300px;
+    height:300px;
+    background-image:url(/images/featured_drone_2_small.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.featured-image-container-3{
+    widows: 300px;
+    height:300px;
+    background-image:url(/images/featured_drone_3_small.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#featuredProductImageContainer-1{
+
+}
+.card,.list-group,.list-group-flush,.list-group-item{
+    border:none!important;
+}
+.list-group-item{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.card img{
+    width:100%;
+}
+/*End of Featured Product Section */
+
+/*NEW COLLECTION SECTION*/
+.new-collection{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+
+/*NEW COLLECTION SECTION END*/
+
+
+
+/*===================================================================*/
+/*HERO 2*/
+.hero-2{
+    border-radius:0;
+    background-image: url(/images/hero-drone-2.jpg);
+    background-repeat:no-repeat;
+    background-position-y: 25%;
+    background-position-x:25%;
+    background-size:cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.hero-2 h2{
+    color:#545067;
+    font-family:"Source Sans Pro","sans-serif";
+    font-weight: bold;
+}
+.view-more-btn{
+    background-color:#f39252;
+    height: 40px;
+    width:150px;
+    margin-bottom:10px;
+}
+/*END HERO 2*/
+
+/*OUR BLOG STARTS HERE*/
+.our-blog{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.blog-date{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.read-more button{
+    font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 3.2;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+.our-blog-image-container{
+    widows: 300px;
+    height:300px;
+    background-image:url(/images/our_blog.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#textHidden{
+    display:none;
+}
+
+/* OUR BLOG ENDS HERE*/
+/*===================================================================*/
+
+
+/*FOOTER SECTION STARTS HERE*/
+footer{
+    margin-top:20px;
+    font-family: 'Dosis', sans-serif;
+
+}
+.footer-top{
+   background-color: #2d2827;
+}
+.footer-heading{
+    margin-top:20px;
+    margin-bottom:15px;
+    color:#e5e5e5;
+}
+.footer-children{
+    margin-top:50px;
+    margin-bottom:25px;
+    color:#999999;
+
+}
+.footer-children ul{
+    margin:auto;
+}
+.footer-children ul li{
+    margin-top:5px;
+    margin-bottom:5px;
+    list-style-type: none;
+}
+.footer-children ul li a{
+    color:#999999;
+}
+.footer-bottom{
+    background-color:#d7d7d7;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* font-family: 'Dosis', sans-serif; */
+/*FOOTER SECTION ENDS HERE*/
+/*=============================================================*/
+/*SHOP PAGE STYLING MAIN STYLING STARTS HERE  */
+.jumbo-shop{
+    background-color:#0e0902 !important;
+    padding-top:120px;
+    padding-bottom:120px;
+    color:#ffff;
+    border-radius:0;
+    background-image: url(/images/featured_drone_3_large.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    /* background-position-y: 25%;
+    background-position-x:25%; */
+    background-size:cover;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.jumbo-shop h1{
+    color:#414149;
+    font-weight:bolder;
+    font-family:"Source Sans Pro","sans-serif";
+
+}
+.jumbo-shop p{
+    margin-top:17rem;
+    color:#545968;
+}
+
+
+
+/*=================MODAL===============================*/
+/* .cart-modal{
+    width: 50vw;
+    max-height: 50vw;
+    
+
+} */
+.modal-dialog{
+    /* width:768px!important; */
+    /* display: flex;
+    justify-content: center;
+    align-items:center; */
+}
+.modal-header{
+    background:cornflowerblue;
+}
+.modal-content{
+    /* margin-left:auto;
+    margin-right:auto;
+    width:60%; */
+}
+.cart-item-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-image{
+    width:50%;
+}
+/*================================================*/
+
+/*SHOP PAGE STYLING MAIN STYLING ENDS HERE  */
 
 /*Media Queries*/
 
