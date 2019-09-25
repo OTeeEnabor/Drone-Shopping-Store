@@ -9,7 +9,8 @@
     <!---Bootstrap CSS-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--Font Awesome Icon-->
-
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 <!--JAVA SCRIPT-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -81,7 +82,22 @@
                     <div class="col-4 cart-item-container">
                         <img class="modal-image cart-item-image"src="/images/featured_drone_1_cart320X213.jpg" alt="Image of ${item.img}">
                         <p class="text-center cart-item-title">Focus Drone</p>
-                        <!-- <span class="cart-text cart-item-title">Focus Drone</span> -->
+                    </div>
+                    <div class=" col-2 cart-item-container">
+                        <span class=" cart-text cart-item-price">R25000</span>
+                    </div>
+                    <div class="col-6 cart-item-container">
+                        <div class="quantity-container">
+                            <input class="cart-quantity-input" type="number" value="1" onclick="quantityChanged(event)">
+                            <button class="btn shop-button cart-button cart-text" type="button" onclick="removeCartItem(event)">Remove Item</button>
+                        </div>
+                            
+                    </div>
+                </div>
+                <div class="row cart-item-row">
+                    <div class="col-4 cart-item-container">
+                        <img class="modal-image cart-item-image"src="/images/featured_drone_1_cart320X213.jpg" alt="Image of ${item.img}">
+                        <p class="text-center cart-item-title">Focus Drone</p>
                     </div>
                     <div class=" col-2 cart-item-container">
                         <span class=" cart-text cart-item-price">R25000</span>
@@ -121,28 +137,71 @@
         <p class="my-4"><a href="index.html">Home</a>/<a href="shop.html">Shop</a></p>
     </div>
     <!--ENDHERO-->
-    <div class="container">
-        <div class="row">
-            <div id="shop-section"class="col-sm shop-container">
-                <div class="card">
-                    <img src="/images/featured_drone_1_small.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Focus Drone</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary text-center">Go somewhere</a>
-                    </div>
-                    <div class="card">
-                            <img src="/images/featured_drone_2_small.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+    <!--SHOP PRODUCTS SECTION STARTS HERE-->
+    <section id="shopSection" class="mt-6">
+        <div class="container shop-products">
+            <!--Product Item starts here-->
+            <div class="row shop-product-row mb-4">
+                <div class="col-lg-4 product-img-container">
+                        <img src="/images/featured_drone_1_small.jpg" class="" alt="...">
                 </div>
-
+                <div class="col-lg-6 product-info-container mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title product-title">Card title</h5>
+                            <h6 class="card-subtitle product-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text product-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button type="button" class="btn  product-button"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Add to cart</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!--Product Item starts here-->
+
+             <!--Product Item starts here-->
+             <div class="row shop-product-row mb-4">
+                    <div class="col-lg-4 product-img-container">
+                            <img src="/images/featured_drone_1_small.jpg" class="" alt="...">
+                    </div>
+                    <div class="col-lg-6 product-info-container mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">Card title</h5>
+                                <h6 class="card-subtitle product-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <p class="card-text product-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <button type="button" class="btn product-button"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Product Item starts here-->
         </div>
-    </div>
+            
+    </section>
+    <!--SHOP PRODUCTS SECTION ENDS HERE-->
+   
 
 </body>
 </html>
+<!-- <div class="row">
+    <div id="shop-section"class="col-sm shop-container">
+        <div class="card shop-product">
+            <img src="/images/featured_drone_1_small.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Focus Drone</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary text-center">Go somewhere</a>
+            </div>
+            <div class="card shop-product">
+                    <img src="/images/featured_drone_2_small.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</div> -->
